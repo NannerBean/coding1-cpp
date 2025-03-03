@@ -89,7 +89,7 @@ int main() {
 	// This is a standard for loop:
 	// for(setup; test; action) { code block}
 	for (int i = 0; i < friendCount; i++) {	// For as long as i (starting at 0).
-		if (bestFeiends[i] == "") {
+		if (bestFriends[i] == "") {
 			continue;
 		}
 		cout << i + 1 << ".\t";				// Add 1		// Is less than friendCount
