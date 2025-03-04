@@ -46,8 +46,8 @@ using namespace std;
 
 int main() {
 	int GameCount = 0;
-	string (input);
-	string FaveGames[20];
+	string input;
+	string FaveGames[10];
 
 	cout << "Hello! Welcome to the Favorite Games list-o-matic!\n";
 
@@ -64,12 +64,17 @@ int main() {
 
 		if (input == "ADD") {
 
-			cout << "\nWhat title would you like to add?\n";
-			getline(cin, input);
-			
-			FaveGames[GameCount++] = input;
-			cout << input << " was added to the list!\n";
-			GameCount += 1;
+			if (GameCount >= 10) {
+				cout << "\nSorry, the list appears to be full!\n";
+			}
+
+			else {
+				cout << "\nWhat title would you like to add?\n";
+				getline(cin, input);
+
+				FaveGames[GameCount++] = input;
+				cout << input << " was added to the list!\n";
+			}
 		}
 
 		if (input == "SHOW") {
